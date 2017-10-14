@@ -1,0 +1,33 @@
+create table tbl_user(
+	nim varchar(15) primary key,
+	nama varchar(50),
+	password varchar(30),
+	status varchar(20),
+	no_telepon varchar(15),
+	email varchar(50),
+	saldo int
+);
+
+create table tbl_menu(
+	kode_menu varchar(5) primary key,
+	nama varchar(40),
+	harga int,
+	stok int
+);
+
+create table tbl_chart(
+	nim varchar(15),
+	kode_menu varchar(5),
+	jumlah int,
+	tanggal date,
+	status varchar(20)
+);
+
+create table tbl_post(
+	no_post int primary key,
+	nim varchar(15),
+	judul varchar(45),
+	tanggal date,
+	isi text,
+	status varchar(20)
+);
